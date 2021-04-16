@@ -1,0 +1,22 @@
+{
+    "courses": [
+        {
+            "id": 0,
+            "name": "Discord 101",
+            "description": "Basic Discord knowledge for making server",
+            "price": 900
+        },
+        {
+            "id": 1,
+            "name": "Discord 102",
+            "description": "Advance Discord knowledge for making server",
+            "price": 1200
+        },
+        {
+            "id": 2,
+            "name": "Linux 101",
+            "description": "Basic Linux knowledge for Kali Linux",
+            "price": 1500
+        }
+    ]
+}
