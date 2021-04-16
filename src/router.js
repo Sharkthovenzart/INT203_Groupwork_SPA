@@ -7,14 +7,19 @@ export default new VueRouter({
     mode: "history",
     routes: [
         {
-        name: "CourseList",
-        path: "/course_list",
-        component: () => import("./components/CourseList")
+            name: "Home",
+            path: "/",
+            component: () => import("./components/Home")
         },
         {
-        name: "CreateCourse",
-        path: "/create_course",
-        component: () => import("./components/CreateCourse")
+            name: "CourseList",
+            path: "/course_list",
+            component: () => import("./components/CourseList")
+        },
+        {
+            name: "CreateCourse",
+            path: "/create_course",
+            component: () => import("./components/CreateCourse")
         }
     ]
 });

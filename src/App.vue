@@ -2,6 +2,9 @@
   <div>
     <!-- Navigation by Router -->
     <div>
+      <router-link to="/">Sharkthoven</router-link>
+    </div>
+    <div>
       <router-link to="/course_list">Course List</router-link>
     </div>
     <div>
