@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     addCourse() {
-      console.log("HIT");
       if (this.name) {
         let payload = { name: this.name, description: this.description, price: this.price };
         this.$store.dispatch("addCourse", payload);

@@ -23,10 +23,10 @@ var app = express();
 app.use(cors());
 
 // Convert JSON so it can send between atlas
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
    extended: true 
 }));
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Create server port
 var port = process.env.PORT || 5000;

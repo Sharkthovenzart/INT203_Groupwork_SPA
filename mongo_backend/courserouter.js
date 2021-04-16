@@ -21,7 +21,7 @@ router.get("/:_id", (req, res) => {
 // POST (create new data)
 router.post("/", (req, res) => {
   var obj = new Course(req.body);
-  obj.save((err, data) => {
+  obj.save((err) => {
     if (err) return res.status(400).send(err);
     res.status(200).send("Already added new data !");
   });
@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
 
 // PUT (update current data)
 router.put("/:_id", (req, res) => {
-  Course.findByIdAndUpdate(req.params._id, req.body, (err, data) => {
+  Course.findByIdAndUpdate(req.params._id, req.body, (err) => {
     if (err) return res.status(400).send(err);
     res.status(200).send("Already updated data !");
   });
@@ -37,7 +37,7 @@ router.put("/:_id", (req, res) => {
 
 // DELETE (delete 1 data)
 router.delete("/:_id", (req, res) => {
-  Course.findByIdAndDelete(req.params._id, (err, data) => {
+  Course.findByIdAndDelete(req.params._id, (err) => {
     if (err) return res.status(400).send(err);
     res.status(200).send("Already deleted data !");
   });

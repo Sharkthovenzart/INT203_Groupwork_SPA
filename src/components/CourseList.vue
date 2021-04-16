@@ -30,7 +30,7 @@
                   <button
                     type="button"
                     class="btn btn-danger mr-2"
-                    v-on:click="deleteCourse(index)"
+                    v-on:click="deleteCourse(index, course._id)"
                   >
                     Delete
                   </button>
@@ -45,20 +45,20 @@
 
                 <!-- Edit Button -->
                 <td v-if="index === editIndex">
-                  <input type="text" :value="name" v-on:change="name = $event.target.value" />
+                  <input type="text" :value="course.name" class="form-control" v-on:change="name = $event.target.value" />
                 </td>
                 <td v-if="index === editIndex">
-                  <input type="text" :value="description" v-on:change="description = $event.target.value" />
+                  <input type="text" :value="course.description" class="form-control" v-on:change="description = $event.target.value" />
                 </td>
                 <td v-if="index === editIndex">
-                  <input type="number" :value="price" v-on:change="price = $event.target.value" />
+                  <input type="number" :value="course.price" class="form-control" v-on:change="price = $event.target.value" />
                 </td>
                 <td v-if="index === editIndex">
-                  <button type="button" class="btn btn-success" v-on:click="editCourse()">Confirm</button>
+                  <button type="button" class="btn btn-success mr-2" v-on:click="editCourse(course._id)">Confirm</button>
                   <button
                     type="button"
-                    class="btn btn-secondary mr-2"
-                    v-on:click="closeEdit()"
+                    class="btn btn-secondary"
+                    v-on:click="closeEdit(index)"
                   >
                     Cancle
                   </button>
@@ -84,9 +84,16 @@ export default {
       editMode: 0,
     };
   },
+  created() {
+    this.fetchCourse();
+  },
   methods: {
-    deleteCourse(index) {
-      this.$store.dispatch("deleteCourse", index);
+    fetchCourse() {
+      this.$store.dispatch("fetchCourse");
+    },
+    deleteCourse(index, _id) {
+      let payload = { index: index, _id: _id };
+      this.$store.dispatch("deleteCourse", payload);
     },
     openEdit(index, course) {
       this.editIndex = index;
@@ -102,9 +109,10 @@ export default {
       this.price = 0;
       this.editMode = 0;
     },
-    editCourse() {
+    editCourse(_id) {
       let payload = {
         index: this.editIndex,
+        _id: _id,
         name: this.name,
         description: this.description,
         price: this.price

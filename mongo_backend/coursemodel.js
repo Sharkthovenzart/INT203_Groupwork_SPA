@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 var courseSchema = mongoose.Schema({
-    // กำหนด ชื่อและชนิดของ document เรา
+    // Set type of data
     name: {
         type: String
     },
