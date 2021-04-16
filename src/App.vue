@@ -1,15 +1,17 @@
 <template>
   <div>
     <!-- Navigation by Router -->
-    <div>
-      <router-link to="/">Sharkthoven</router-link>
-    </div>
-    <div>
-      <router-link to="/course_list">Course List</router-link>
-    </div>
-    <div>
-      <router-link to="/create_course">Add Course</router-link>
-    </div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <router-link to="/" class="navbar-brand">Sharkthoven</router-link>
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <router-link to="/course_list" class="nav-link">Course List</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/create_course" class="nav-link">Create Course</router-link>
+        </li>
+      </div>
+    </nav>
 
     <!-- Preview by Router -->
     <router-view></router-view>
@@ -18,8 +20,8 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
 
 <style>
