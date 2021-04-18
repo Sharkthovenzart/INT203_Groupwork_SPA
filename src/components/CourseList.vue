@@ -12,9 +12,9 @@
               <tr>
                 <th style="width: 8.33%">No</th>
                 <th style="width: 25%">Name</th>
-                <th style="width: 46%">Description</th>
+                <th style="width: 41%">Description</th>
                 <th style="width: 10.66%">Price &lpar;Baht&rpar;</th>
-                <th style="width: 10%">Operation</th>
+                <th style="width: 25%">Operation</th>
               </tr>
             </thead>
             <tbody>
