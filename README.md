@@ -7,7 +7,7 @@
 - Vue-Router Version 3.5.1
 - Axios Version 0.21.1
 - Core JS Version 3.6.5
-- Bootstrap Version 4.x.x
+- Bootstrap Version 4
 
 ## Project Dependency (Back-End)
 - Body-Parser Version 1.19.0
