@@ -10,11 +10,11 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                <th style="width: 8.33%">No</th>
-                <th style="width: 25%">Name</th>
-                <th style="width: 41%">Description</th>
-                <th style="width: 10.66%">Price &lpar;Baht&rpar;</th>
-                <th style="width: 25%">Operation</th>
+                <th style="width: 5%">No</th>
+                <th style="width: 28.33%">Name</th>
+                <th style="width: 40%">Description</th>
+                <th style="width: 11%">Price &lpar;Baht&rpar;</th>
+                <th style="width: 25.66%">Operation</th>
               </tr>
             </thead>
             <tbody>
@@ -57,7 +57,7 @@
                   <button type="button" class="btn btn-success mr-2" v-on:click="editCourse(course._id)">Confirm</button>
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    class="btn btn-secondary mt-1"
                     v-on:click="closeEdit(index)"
                   >
                     Cancle
